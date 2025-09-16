@@ -16,10 +16,5 @@ def on_startup() -> None:
     init_super_user()
 
 
-@app.get("/")
-def root():
-    return {"msg": "OK"}
-
-
 app.include_router(auth_router)
 app.include_router(users_router)
